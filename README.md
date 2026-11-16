@@ -45,7 +45,7 @@ Open `baseline/htmlcov/index.html` and `htmlcov/index.html` to inspect unexecute
 - `htmlcov/index.html` and `baseline/htmlcov/index.html`: HTML coverage entry points.
 - `results/`: full, actual tool output from each run.
 - `evidence/`: images of the recorded command output used in the report. They are rendered from the saved tool output, not screenshots of the Terminal application.
-- `capture_terminal_screenshots.command`: guided Terminal run that captures eight actual Terminal window screenshots. Run it with `zsh capture_terminal_screenshots.command`, click the Terminal window when macOS asks for each window capture, then insert the eight `*_terminal.png` files into the report if strict screenshots are required. The baseline memory run can take several minutes.
+- `capture_terminal_screenshots.command`: guided Terminal run that captures eight actual screen images while Terminal shows each result. Run it with `zsh capture_terminal_screenshots.command`. It saves each image automatically to `evidence/`; if macOS denies capture, follow the on-screen manual capture instruction. The baseline memory run can take several minutes.
 - `lab9_Karim_Assi.docx`: comparative report.
 
 The baseline and optimized `memory_intensive_function()` use constant space. The improvement is CPU time; separate memory-profiler runs did not show a meaningful RSS reduction. The code tests the numerical outputs and avoids relying on an increase in RSS, which is not guaranteed by Python's allocator.
