@@ -43,9 +43,8 @@ Open `baseline/htmlcov/index.html` and `htmlcov/index.html` to inspect unexecute
 - `profiler.py`, `profiler_lineprofiler.py`, `profiler_memoryprofiler.py`, and `test_profiler.py`: optimized version.
 - `baseline/`: corresponding original version of all four code files.
 - `htmlcov/index.html` and `baseline/htmlcov/index.html`: HTML coverage entry points.
-- `results/`: full, actual tool output from each run.
-- `evidence/`: images of the recorded command output used in the report. They are rendered from the saved tool output, not screenshots of the Terminal application.
-- `capture_terminal_screenshots.command`: guided Terminal run that captures eight actual screen images while Terminal shows each result. Run it with `zsh capture_terminal_screenshots.command`. It saves each image automatically to `evidence/`; if macOS denies capture, follow the on-screen manual capture instruction. The baseline memory run can take several minutes.
+- `results/`: full tool output from an earlier run. Its timings can differ slightly from the screenshot run.
+- `evidence/`: eight original Terminal screenshots of the baseline and optimized profiling and test runs used in the report.
 - `lab9_Karim_Assi.docx`: comparative report.
 
 The baseline and optimized `memory_intensive_function()` use constant space. The improvement is CPU time; separate memory-profiler runs did not show a meaningful RSS reduction. The code tests the numerical outputs and avoids relying on an increase in RSS, which is not guaranteed by Python's allocator.
