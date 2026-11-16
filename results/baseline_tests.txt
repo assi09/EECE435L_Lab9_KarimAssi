@@ -1,0 +1,12 @@
+test_fast_function (test_profiler.TestProfiler.test_fast_function) ... ok
+test_main_calls_all_functions (test_profiler.TestProfiler.test_main_calls_all_functions) ... ok
+test_memory_intensive_function (test_profiler.TestProfiler.test_memory_intensive_function) ... ok
+test_slow_function (test_profiler.TestProfiler.test_slow_function) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.789s
+
+OK
+fast_function: 0.000014 s
+memory_intensive_function: 0.754 s; RSS: 37.44 -> 37.44 MiB
+slow_function: 2.006 s

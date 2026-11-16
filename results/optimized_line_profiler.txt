@@ -1,0 +1,36 @@
+Timer unit: 1e-09 s
+
+Total time: 2.0085 s
+File: /Users/karimassi/Desktop/All/AUB/EECE435L/Lab 9/lab9_Karim_Assi/profiler.py
+Function: slow_function at line 6
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     6                                           def slow_function():
+     7         1 2005038000.0 2.01e+09     99.8      time.sleep(2)
+     8         1       1000.0   1000.0      0.0      total = 0
+     9     10001    1537000.0    153.7      0.1      for i in range(10_000):
+    10     10000    1924000.0    192.4      0.1          total += i ** 2
+    11         1       2000.0   2000.0      0.0      return total
+
+Total time: 1e-06 s
+File: /Users/karimassi/Desktop/All/AUB/EECE435L/Lab 9/lab9_Karim_Assi/profiler.py
+Function: optimized_fast_function at line 14
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    14                                           def optimized_fast_function():
+    15         1          0.0      0.0      0.0      n = 100
+    16         1       1000.0   1000.0    100.0      return (n - 1) * n * (2 * n - 1) // 6
+
+Total time: 2e-06 s
+File: /Users/karimassi/Desktop/All/AUB/EECE435L/Lab 9/lab9_Karim_Assi/profiler.py
+Function: memory_intensive_function at line 19
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    19                                           def memory_intensive_function():
+    20                                               # The identity 0**2 + ... + (n-1)**2 = (n-1)*n*(2*n-1)//6
+    21         1          0.0      0.0      0.0      n = 10_000_000
+    22         1       2000.0   2000.0    100.0      return (n - 1) * n * (2 * n - 1) // 6
+

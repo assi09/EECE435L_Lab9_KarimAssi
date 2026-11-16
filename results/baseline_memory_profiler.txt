@@ -1,0 +1,12 @@
+Filename: profiler_memoryprofiler.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+     7     28.1 MiB     28.1 MiB           1   @profile
+     8                                         def memory_intensive_function():
+     9     28.1 MiB      0.0 MiB           1       total = 0
+    10     28.1 MiB      0.0 MiB    10000001       for i in range(10_000_000):
+    11     28.1 MiB      0.0 MiB    10000000           total += i ** 2
+    12     28.1 MiB      0.0 MiB           1       return total
+
+
